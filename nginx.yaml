@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-web
+  namespace: nginx
+spec:
+  strategy: 
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-web
+  template:
+    metadata:
+      labels:
+        app: nginx-web
+    spec:
+      # volumes:
+      # - name: my-volume
+      #   persistentVolumeClaim:
+      #     claimName: my-pvc
+      containers:
+      - name: server
+        image: nginx
+        command: ["/usr/sbin/nginx", "-g", "daemon off;"]
+        # volumeMounts:
+        # - mountPath: /usr/share/nginx/htm
+        #   name: my-volume
+        ports:
+        - containerPort: 80
+          name: nginx-web
+      # - name: php
+      #   image: own-image-with-php-backend:v1.0
+      #   command: ["/usr/local/sbin/php-fpm","-F"]
+      #   workingDir: /var/www
+      #   resources:
+      #     requests:
+      #       cpu: "100m"        
+      #       memory: "100Mi"   
+      #     limits:
+      #       cpu: "100m"        
+      #       memory: 100Mi"  
+      # docker run --name nginx_myproject -p 8080:80 -v /home/webuser/myproject/www:/usr/share/nginx/html -v /home/webuser/myproject/nginx_logs:/var/log/nginx -d nginx
