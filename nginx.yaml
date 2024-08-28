@@ -14,18 +14,10 @@ spec:
     metadata:
       labels:
         app: nginx-web
-    spec:
-      # volumes:
-      # - name: my-volume
-      #   persistentVolumeClaim:
-      #     claimName: my-pvc
       containers:
       - name: server
         image: nginx
         command: ["/usr/sbin/nginx", "-g", "daemon off;"]
-        # volumeMounts:
-        # - mountPath: /usr/share/nginx/htm
-        #   name: my-volume
         ports:
         - containerPort: 80
           name: nginx-web
