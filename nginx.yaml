@@ -1,26 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-web
-  namespace: nginx
+  name: nginx-deployment
 spec:
-  strategy: 
-    type: Recreate
-  replicas: 1
   selector:
     matchLabels:
-      app: nginx-web
+      app: nginx
+  replicas: 2 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: nginx-web
+        app: nginx
+    spec:
       containers:
-      - name: server
+      - name: nginx
         image: nginx
-        command: ["/usr/sbin/nginx", "-g", "daemon off;"]
         ports:
         - containerPort: 80
-          name: nginx-web
+      # volumeMounts:
+      #   - mountPath: "/usr/share/nginx/html"
+      #     name: my-pvc
       # - name: php
       #   image: own-image-with-php-backend:v1.0
       #   command: ["/usr/local/sbin/php-fpm","-F"]

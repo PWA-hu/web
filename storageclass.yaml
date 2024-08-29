@@ -1,0 +1,6 @@
+apiVersion: storage.k3s.io/v1
+kind: StorageClass
+metadata:
+ name: my-local-sc
+ provisioner: kubernetes.io/no-provisioner
+ volumeBindingMode: WaitForFirstConsumer
