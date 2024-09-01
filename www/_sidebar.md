@@ -1,7 +1,13 @@
 <!-- _sidebar.md -->
-* [Home](/_sidebar.md)
+
+* [Home](_sidebar.md)
 * [Docsify](doc/docsify.md)
-* [bash](doc/bash.md)
-* [docker](doc/docker.md)
-* [git](doc/git.md)
-* [kubernetes](doc/kubernetes.md)
+* [Bash](doc/bash.md)
+* [Docker](doc/docker.md)
+* [Git](doc/git.md)
+* [Kubernetes](doc/kubernetes.md)
+* [Ansible](/doc/ansible.md)
+* [Question](doc/questshin.md)
+* [Debug](doc/debug.md)
+* [ArgoCd](doc/argocd.md)
+* [CiCd](doc/cicd.md)

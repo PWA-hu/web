@@ -40,13 +40,11 @@ docker rmi <image>	|удалить образ
 docker system prune	|удалить остановленные контейнеры
 docker build . -t my-app	|собрать свой образ
 docker run -it my-calendar	|запуск контейнера из образа
-docker build . -t my-calendar:2.0.0	|сборка наовой версии
+docker build . -t my-calendar:2.0.0	|сборка новой версии
 docker inspect docerimage |подробнее рассказывает о выбранном контейнере
 docker rm containername | удаляет выбранный контейнер (он должен быть выключен, чтобы команда сработала).
 docker image build | создать образ 
-docker push pwaawp/nameimage|отправить образ  в репозиторий
 docker login| войти в докерхаб
-docker pull image | скачать образ
 docker search nameimage| поиск образа в репозитории
 
 
