@@ -2,12 +2,13 @@ kind: Service
 apiVersion: v1
 metadata:
   namespace: docsify
-  name: service-docsify
+  name: service-docsify-nodeport
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: docsify
   ports:
   - protocol: TCP
     port: 3000
     targetPort: 3000
+    nodePort: 30080
