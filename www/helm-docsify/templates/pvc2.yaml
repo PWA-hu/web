@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvcdocsify
+  name: pvcdocsify-helm
 spec:
   storageClassName: manual
   accessModes:

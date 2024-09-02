@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: service-docsify-nodeport
+  name: service-docsify-nodeport-helm
 spec:
   type: NodePort
   selector:

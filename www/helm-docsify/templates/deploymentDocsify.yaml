@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: docsify-deployment
+  name: docsify-deployment-helm
 spec:
   replicas: 2 
   selector:
@@ -23,4 +23,4 @@ spec:
       volumes:
       - name: task-pv-storage
         persistentVolumeClaim:
-          claimName: my-pvc 
+          claimName: pvcdocsify-helm
