@@ -1,0 +1,12 @@
+# it work 
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvcdocsify
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: docksifypod
+spec:
+  volumes:
+    - name: task-pv-storage
+      persistentVolumeClaim:
+        claimName: my-pvc
+  containers:
+    - name: docify
+      image: pwaawp/docsify
+      ports:
+        - containerPort: 3000
+          name: "docsify"
+      volumeMounts:
+        - mountPath: "/docs"
+          name: task-pv-storage

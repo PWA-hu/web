@@ -1,6 +1,6 @@
 * [Ansible](/doc/ansibleq.md)
 * [CiCd](/doc/cicdq.md)
-* [Databases](/doc/databaseq.md)
+* [Databases](/doc/databasesq.md)
 * [Docker](/doc/dockerq.md)
 * [Git](/doc/gitq.md)
 * [Kubernetes](/doc/kubeq.md)

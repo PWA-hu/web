@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: docsify
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: docsi.pwaawp.ru
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: service-docsify-nodeport
+            port:
+              number: 3000
+         
