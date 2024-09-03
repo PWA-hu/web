@@ -7,7 +7,6 @@
 * [Git](doc/git.md)
 * [Kubernetes](doc/kubernetes.md)
 * [Ansible](/doc/ansible.md)
-* [Question](doc/questshin.md)
 * [Debug](doc/debug.md)
 * [ArgoCd](doc/argocd.md)
 * [CiCd](doc/cicd.md)
