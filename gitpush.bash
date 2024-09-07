@@ -1,4 +1,4 @@
 #!/bin/bash
-COMMITTEXT="${1:-NOT_SET}"
+COMMITTEXT="${1}"
 git add .
 git commit -m $COMMITTEXT
