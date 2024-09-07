@@ -13,4 +13,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: "/home/pwa/www/webk "
+    path: "/home/pwa/www/web"
