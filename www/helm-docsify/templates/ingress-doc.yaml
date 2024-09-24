@@ -13,7 +13,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: service-docsify-nodeport-helm
+            name: service-docsify-nodeport-helmsudo apt-get install python3.6
             port:
               number: 3000
          
